@@ -128,13 +128,10 @@ body {
     font-weight: 900;
     border: none;
 }
-
 /* Click (active) pulse effect */
 .mybtn:active {
     animation: pulseClick 0.4s ease-out;
 }
-
-/* Pulse keyframes */
 @keyframes pulseClick {
     0% {
         transform: scale(1);
@@ -166,7 +163,6 @@ body {
   justify-content: center;
   overflow: hidden;
 }
-
 /* Dark overlay */
 .parallax-slide .overlay {
   position: absolute;
@@ -177,7 +173,6 @@ body {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-
 /* Caption */
 .carousel-caption {
   padding: 100px 80px;
@@ -185,7 +180,6 @@ body {
   position: relative; 
   text-align: center;
 }
-
 .carousel-caption h1 {
   font-size: calc(3vw + 1rem);
   text-transform: uppercase;
@@ -194,14 +188,12 @@ body {
   letter-spacing: -3px;
   color: #fff;
 }
-
 mark.red {
   color: #FC161A;
   background: none;
   font-weight: 900;
   font-style: italic;
 }
-
 @media (max-width: 1031px) {
   .carousel-caption {
     padding: 60px 30px;
@@ -213,7 +205,6 @@ mark.red {
     line-height: 1.3;
   }
 }
-
 @media (max-width: 480px) {
 
   .carousel-caption {
@@ -252,19 +243,16 @@ mark.red {
    margin: 0 auto;
    filter: invert(23%) sepia(44%) saturate(6964%) hue-rotate(347deg) brightness(105%) contrast(115%);
 }
-
 @media (max-width: 991.98px) {
    .services-img {
       height: 180px; /* Larger size for tablets */
    }
 }
-
 @media (max-width: 575.98px) {
    .services-img {
       height: 220px; /* Bigger for small screens */
    }
 }
-
 @media (max-width: 766px) {
    .services-img {
       height: 220px; /* Bigger for small screens */
@@ -279,11 +267,7 @@ mark.red {
 }
 /* Custom column for 5 items per row on large screens */
 @media (max-width: 767.98px) {
-   .product-box-sm:hover {
-      transform: scale(1.05); /* less aggressive on small screens */
-   }
-
-     .product-caption {
+   .product-caption {
     position: relative;
     background-color: rgba(0, 0, 0, 0.8);
     opacity: 1; /* Show by default */
@@ -299,6 +283,20 @@ mark.red {
     opacity: 1; /* keep for consistency */
   }
 }
+/* Disable zoom effect on mobile */
+@media (max-width: 767.98px) {
+  .product-box-sm:hover {
+    transform: none !important;
+  }
+}
+
+/* Enable zoom effect on desktop only */
+@media (min-width: 768px) {
+  .product-box-sm:hover {
+    transform: scale(1.15);
+    z-index: 2;
+  }
+}
 
 /* Product box height control */
 .product-box-sm {
@@ -312,6 +310,7 @@ mark.red {
    border: 1px solid #ccc;
    background-color: #fff;
    transition: all 0.3s;
+   position: relative;
 }
 /* Uniform image resizing */
 .product-img-sm {
@@ -330,15 +329,19 @@ mark.red {
 .product-caption {
    position: absolute;
    bottom: 0;
+   left: 0;
    width: 100%;
    background-color: rgba(0, 0, 0, 0.6);
    color: white;
    text-align: center;
-   font-size: 0.9rem;
-   padding: 5px 0;
+   font-size: 0.85rem;
+   padding: 6px 5px;
    opacity: 0;
    transition: opacity 0.3s ease;
    pointer-events: none;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
 /* shows product caption by hovering via desktop
 & shows product caption by clicking via mobile/responsive */
@@ -346,7 +349,6 @@ mark.red {
 .product-box-sm.active .product-caption {
    opacity: 1;
 }
-
 .product-box-sm:hover {
    z-index: 2;
 }
