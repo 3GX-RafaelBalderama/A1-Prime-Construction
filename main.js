@@ -55,16 +55,3 @@ window.addEventListener('resize', function () {
       });
    }
 });
-
-//modal poppup when the submission in contact form is successful
-function myfn() {
-    const form = document.querySelector('.form');
-
-    // If form is valid
-    if (form.checkValidity()) {
-      const modal = new bootstrap.Modal(document.getElementById('myModal'));
-      modal.show();
-    } else {
-      form.reportValidity(); // shows browser validation
-    }
-  }

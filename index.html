@@ -150,7 +150,7 @@
 <!-- Contact Form -->
 <div class="col-lg-6 mb-4">
   <div class="d-flex justify-content-center">
-    <form class="form" style="width: 100%; max-width: 500px;" onsubmit="event.preventDefault(); myfn()">
+    <form id="myForm" class="form" style="width: 100%; max-width: 500px;" onsubmit="event.preventDefault(); myfn()">
       <div class="row">
         <div class="col-md-6">
           <div class="input-group mb-3">
@@ -193,7 +193,6 @@
       <div class="text-center">
         <button type="submit" class="mybtn mybtn2 trigger-btn">Submit</button>
       </div>
-
 
     </form>
   </div>
@@ -302,5 +301,24 @@
     </div>
   </div>
 </div>
+
+<!--modal form poppup / contact form resets after closing the modal poppup-->
+<script>
+  // Show modal if form is valid
+  function myfn() {
+    const form = document.getElementById('myForm');
+    if (form.checkValidity()) {
+      const modal = new bootstrap.Modal(document.getElementById('myModal'));
+      modal.show();
+    } else {
+      form.reportValidity();
+    }
+  }
+
+  // Reset form when modal is closed
+  document.getElementById('myModal').addEventListener('hidden.bs.modal', function () {
+    document.getElementById('myForm').reset();
+  });
+</script>
 
 </html>

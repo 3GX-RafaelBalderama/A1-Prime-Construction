@@ -596,7 +596,7 @@ button[type="submit"] {
 
 /* modal design style */
 .modal-confirm {		
-	color: #636363;
+	color: #000;
 	width: 325px;
 	margin: 30px auto;
 }
@@ -642,7 +642,7 @@ button[type="submit"] {
 	width: 95px;
 	height: 95px;
 	border-radius: 50%;
-	background: #82ce34;
+	background: #FC161A;
 	padding: 15px;
 	text-align: center;
 	color: #fff;
@@ -657,7 +657,7 @@ button[type="submit"] {
 .modal-confirm .btn {
 	color: #fff;
 	border-radius: 4px;
-	background: #82ce34;
+	background: #FC161A;
 	text-decoration: none;
 	transition: all 0.4s;
 	line-height: normal;
@@ -668,6 +668,6 @@ button[type="submit"] {
 }
 .modal-confirm .btn:hover,
 .modal-confirm .btn:focus {
-	background: #6fb32b;
+	background: #636363;
 	outline: none;
 }
