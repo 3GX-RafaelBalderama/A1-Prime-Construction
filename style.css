@@ -484,6 +484,15 @@ textarea.form-control {
   color: #FC161A;
 }
 
+/* remove the background color on inputs when autocompleted */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 /* Checkbox spacing */
 .form-check {
   margin-top: 30px;
@@ -583,4 +592,82 @@ button[type="submit"] {
 #footer-fbjobs a:hover::after{
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* modal design style */
+.modal-confirm {		
+	color: #636363;
+	width: 325px;
+	margin: 30px auto;
+}
+.modal-confirm .modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+.modal-confirm .modal-header {
+	border-bottom: none;
+	position: relative;
+	justify-content: center;      
+	flex-direction: column;       
+	align-items: center;
+   padding-top: 30px;          
+}
+.modal-confirm h4 {
+	text-align: center;
+	font-size: 26px;
+	margin: 30px 0 -15px;
+}
+.modal-confirm .form-control,
+.modal-confirm .btn {
+	min-height: 40px;
+	border-radius: 3px;
+}
+.modal-confirm .close {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+}	
+.modal-confirm .modal-footer {
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 13px;
+}	
+.modal-confirm .icon-box {
+	position: absolute;
+	top: -47px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+	background: #82ce34;
+	padding: 15px;
+	text-align: center;
+	color: #fff;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+	z-index: 9;
+}
+.modal-confirm .icon-box i {
+	font-size: 58px;
+	position: relative;
+	top: 3px;
+}
+.modal-confirm .btn {
+	color: #fff;
+	border-radius: 4px;
+	background: #82ce34;
+	text-decoration: none;
+	transition: all 0.4s;
+	line-height: normal;
+	border: none;
+	width: 100%;
+	font-size: 16px; 
+	padding: 10px 0; 
+}
+.modal-confirm .btn:hover,
+.modal-confirm .btn:focus {
+	background: #6fb32b;
+	outline: none;
 }

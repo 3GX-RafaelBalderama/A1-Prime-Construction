@@ -4,10 +4,11 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>A1-Prime Corporation</title>
-   <link rel="stylesheet" href="style.css">
+   <link href="style.css" rel="stylesheet">
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
 </head>
 
@@ -89,7 +90,7 @@
          </div>
       </div>
       <div style="text-align: center;" data-aos="zoom-down">
-         <a href="#contact">
+         <a href="#Contact">
          <button class="mybtn mybtn2">Let's Talk</button> <!--let's talk button-->
          </a>
       </div>
@@ -146,10 +147,10 @@
     </p>
 
     <div class="row">
-      <!-- Contact Form -->
+<!-- Contact Form -->
 <div class="col-lg-6 mb-4">
   <div class="d-flex justify-content-center">
-    <form style="width: 100%; max-width: 500px;">
+    <form class="form" style="width: 100%; max-width: 500px;" onsubmit="event.preventDefault(); myfn()">
       <div class="row">
         <div class="col-md-6">
           <div class="input-group mb-3">
@@ -182,7 +183,7 @@
 
       <div class="form-group mb-3"> <!--privacy checklist-->
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <input class="form-check-input" type="checkbox" id="gridCheck" required>
           <label class="form-check-label" for="gridCheck">
             I agree that my data is collected and stored.
           </label>
@@ -190,14 +191,16 @@
       </div>
 
       <div class="text-center">
-        <button type="submit" class="mybtn mybtn2">Submit</button>
+        <button type="submit" class="mybtn mybtn2 trigger-btn">Submit</button>
       </div>
+
+
     </form>
   </div>
 </div>
 
 
-      <!-- Map Section -->
+<!-- Map Section -->
       <div class="col-lg-6 mb-4" data-aos="zoom-down">
         <div class="map-container text-center" onclick="this.classList.add('clicked')">
           <div class="map-scroll-blocker"></div>
@@ -238,7 +241,7 @@
       <div id="footer-contactdetails" class="col-md-4 mb-4">
         <h5 class="fw-bold mb-3">Contact Details</h5>
         <p><i class="bi bi-geo-alt-fill me-2"></i>Zone 2, Maharlika Highway, Concepcion Grande, Naga City, Camarines Sur 4400</p>
-        <p><i class="bi bi-envelope-fill me-2"></i>alprimeconst@gmail.com</p>
+        <p><i class="bi bi-envelope-fill me-2"></i>a1primeconst@gmail.com</p>
         <p><i class="bi bi-phone-fill me-2"></i>0991-946-5082</p>
         <p><i class="bi bi-telephone-fill me-2"></i>054-205-6375</p>
       </div>
@@ -274,11 +277,30 @@
   </footer>
 </div>
 
-
-
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="main.js"></script>
 </body>
+
+ <!-- Modal poppup in contact form-->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-confirm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="icon-box">
+          <i class="material-icons">&#xE876;</i>
+        </div>
+        <h4 class="modal-title">Awesome!</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-center">Please wait our email for the confirmation, Thank you.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </html>
